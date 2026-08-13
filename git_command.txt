@@ -1,0 +1,32 @@
+ls -a
+git status
+git restore testing.py
+git status
+git add .
+git status
+git commit -m "Add File "
+git status
+git rm testing.py
+git rm Testing.py
+git status
+git restore Testing.py
+clear
+git restore --source=HEAD --staged --worktree Testing.py
+
+
+git rm Testing.py
+git status
+git restore Testing.py
+clear
+git restore --source=HEAD --staged --worktree Testing.py
+git status
+ls 
+history
+git remote add origin https://github.com/SkyInfra/-GitHub-for-DeveOps-Workshop.git
+git status
+git remote -v
+git remote set-url origin https://@github.com/SkyInfra/-GitHub-for-DeveOps-Workshop.git
+git remote -v
+git push origin master
+git push origin master
+git push -u origin main
