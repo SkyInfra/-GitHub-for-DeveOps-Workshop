@@ -30,5 +30,6 @@ git remote -v
 git push origin master
 git push origin master
 git push -u origin main
+git pull origin main 
 
 this is some thing new 
