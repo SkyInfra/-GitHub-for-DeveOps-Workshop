@@ -31,5 +31,14 @@ git push origin master
 git push origin master
 git push -u origin main
 git pull origin main 
-
+head  // represent latest commit in repo
 this is some thing new 
+
+| What you want                           | Command                        |
+| --------------------------------------- | ------------------------------ |
+| See history                             | `git log --oneline`            |
+| Look at old commit                      | `git switch --detach <commit>` |
+| Undo latest commit, keep staged changes | `git reset --soft HEAD~1`      |
+| Undo latest commit, keep files changed  | `git reset HEAD~1`             |
+| Undo latest commit + delete changes     | `git reset --hard HEAD~1` ⚠️   |
+| Undo uncommitted file changes           | `git restore <file>`           |
