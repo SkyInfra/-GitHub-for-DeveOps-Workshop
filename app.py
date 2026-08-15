@@ -1,12 +1,11 @@
 tasks = []
 
 
-def add_task(title, priority="medium"):
+def add_task(title):
     task = {
         "id": len(tasks) + 1,
         "title": title,
-        "completed": False,
-        "priority": priority
+        "completed": False
     }
 
     tasks.append(task)
@@ -49,10 +48,7 @@ def display_tasks():
     for task in tasks:
         status = "✓" if task["completed"] else " "
 
-        print(
-            f'{task["id"]}. [{status}] '
-            f'{task["title"]} - Priority: {task["priority"]}'
-        )
+        print(f'{task["id"]}. [{status}] {task["title"]}')
 
 
 def main():
@@ -68,25 +64,7 @@ def main():
 
         if choice == "1":
             title = input("Enter task: ")
-
-            print("\nChoose priority:")
-            print("1. High")
-            print("2. Medium")
-            print("3. Low")
-
-            priority_choice = input("Choose priority: ")
-
-            if priority_choice == "1":
-                priority = "high"
-            elif priority_choice == "2":
-                priority = "medium"
-            elif priority_choice == "3":
-                priority = "low"
-            else:
-                print("Invalid priority.")
-                continue
-
-            add_task(title, priority)
+            add_task(title)
             print("Task added successfully.")
 
         elif choice == "2":

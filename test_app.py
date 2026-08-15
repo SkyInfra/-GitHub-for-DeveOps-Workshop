@@ -4,11 +4,10 @@ import app
 def test_add_task():
     app.tasks.clear()
 
-    task = app.add_task("Learn Git", "high")
+    task = app.add_task("Learn Git")
 
     assert task["title"] == "Learn Git"
     assert task["completed"] is False
-    assert task["priority"] == "high"
 
 
 def test_delete_task():
